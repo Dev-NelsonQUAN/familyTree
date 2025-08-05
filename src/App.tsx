@@ -135,7 +135,7 @@ const App: React.FC = () => {
             <div className="absolute top-[-10px] left-0 right-0 h-0.5 bg-gray-400 mx-auto"
                  style={{ width: 'calc(100% - 64px)', zIndex: 0 }}></div> {/* Adjusted width for padding */}
 
-            {familyTree.wives.map((wife, index) => (
+            {familyTree.wives.map((wife) => (
               <div key={wife.id} className="bg-blue-50 p-6 rounded-lg shadow-md w-full md:w-1/3 flex flex-col items-center border border-blue-200 relative">
                 {/* Vertical line from horizontal connector to wife */}
                 <div className="absolute top-[-10px] left-1/2 -translate-x-1/2 w-0.5 h-2.5 bg-gray-400 z-0"></div>
@@ -162,7 +162,7 @@ const App: React.FC = () => {
 
                     <h3 className="text-lg font-semibold text-gray-700 mb-3">Children of {wife.name}:</h3>
                     <ul className="list-none p-0 space-y-2">
-                      {wife.children.map((child, childIndex) => (
+                      {wife.children.map((child) => (
                         <li key={child.id} className="bg-white py-2 px-4 rounded-md shadow-sm text-gray-800 text-sm border border-gray-100 relative z-10">
                           {/* Vertical line from horizontal connector to child */}
                           <div className="absolute top-[-10px] left-1/2 -translate-x-1/2 w-0.5 h-2.5 bg-gray-400 z-0"></div>
